@@ -1,0 +1,2 @@
+﻿  main.cpp
+c:\users\ivano\desktop\sfml\external libraries\sfml\include\sfml\graphics\texture.hpp(32): fatal error C1083: Не удается открыть файл включение: SFML/Graphics/Image.hpp: No such file or directory,
