@@ -1,0 +1,16 @@
+CFLAGS=-std=c++17 -c -Wall
+CC=g++
+SFML=-lsfml-graphics -lsfml-window -lsfml-system -lm
+
+run: compile
+	./run
+	
+compile: main.o
+	$(CC) main.o -o run $(SFML)
+	
+main.o: main.cpp
+	$(CC) $(CFLAGS) main.cpp
+	
+clean:
+	rm -rf *.o main
+	rm -f run

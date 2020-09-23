@@ -1,3 +1,0 @@
-# LightCasting
-
-![Preview](Demo.png)

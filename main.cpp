@@ -1,5 +1,5 @@
-#include <SFML\Graphics.hpp>
-
+#include <SFML/Graphics.hpp>
+#include <math.h>
 
 using namespace sf;
 using namespace std;
@@ -44,7 +44,7 @@ int main()
 
 void Draw()
 {
-	WindoW.clear(Color::Color(0, 0, 0));
+	WindoW.clear(Color::Black);
 
 	string s = "" + KolWalls;
 
@@ -55,7 +55,7 @@ void Draw()
 		{
 			CircleShape Mse;
 			Mse.setRadius(i);
-			Mse.setFillColor(Color::Color(255 * (i - R), 255 * (i - R), 255 * (i - R)));
+			Mse.setFillColor(Color(255 * (i - R), 255 * (i - R), 255 * (i - R)));
 			Mse.setPosition(Mice.getPosition(WindoW).x - i, Mice.getPosition(WindoW).y - i);
 
 			WindoW.draw(Mse);
@@ -104,7 +104,7 @@ void ClickEventManage()
 			else if (KolWalls < MaxWalls)
 			{
 				WallList[KolWalls] = RectangleShape(Vector2f(WallSize, WallSize));
-				WallList[KolWalls].setFillColor(Color::Color(101, 21, 107));
+				WallList[KolWalls].setFillColor(Color(101, 21, 107));
 				WallList[KolWalls].setPosition(Mice.getPosition(WindoW).x - Mice.getPosition(WindoW).x % WallSize, Mice.getPosition(WindoW).y - Mice.getPosition(WindoW).y % WallSize);
 				KolWalls++;
 			}
